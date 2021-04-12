@@ -97,6 +97,10 @@ StyleCopReport.xml
 *.pidb
 *.svclog
 *.scc
+*.csproj
+*.sln
+*.gitignore
+*..gitattributes
 
 # Chutzpah Test files
 _Chutzpah*
