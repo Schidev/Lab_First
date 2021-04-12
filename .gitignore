@@ -100,7 +100,7 @@ StyleCopReport.xml
 *.csproj
 *.sln
 *.gitignore
-*..gitattributes
+*.gitattributes
 
 # Chutzpah Test files
 _Chutzpah*
