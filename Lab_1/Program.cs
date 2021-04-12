@@ -4,24 +4,40 @@ namespace Lab_1
 {
     class Program
     {
-        static void Main(string[] args)
+
+		static void Main(string[] args)
         {
 			int[] arr = new[] { 6, 4, 2, 5, 1, 2, 0 };
-			A b = new A(arr);
-			
-			Console.WriteLine();
+			QuickSort b = new QuickSort(arr);
+
 			Console.Write("Array b4 sorting: ");
-			b.Print();
-
-			b.Sort(0, b.GetTail());
-
-			Console.WriteLine();
+			Print(arr);
+			b.Sort(0, arr.Length - 1);
 			Console.Write("Array after sorting: ");
-			b.Print();
-
-			Console.WriteLine();
-			Console.WriteLine();
-			Console.WriteLine();
+			GetArr(arr, b);
+			Print(arr);
 		}
-    }
+
+		static void Print(int[] _array)
+		{
+			string _string = "";
+			for (int i = 0; i < _array.Length; i++)
+			{
+				if (i == 0) _string += ("[" + _array[i] + ",");
+				if ((i != 0) && (i != _array.Length - 1)) _string += (" " + _array[i] + ",");
+				if (i == _array.Length - 1) _string += (" " + _array[i] + "]");
+			}
+
+			Console.WriteLine(_string);
+		}
+
+		static void GetArr(int[] _array, QuickSort _sorted)
+		{
+			for (int i = 0; i < _array.Length; i++)
+			{
+				_array[i] = _sorted.GetSortedArrEl(i);
+			}
+		}
+
+	}
 }

@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace Lab_1
 {
-    class A
-    {
+    public class QuickSort
+	{
 		private static int[] _array;
 
-		public A(int[] array)
+		public QuickSort(int[] array)
 		{
 			_array = new int[array.Length];
 			for (int i = 0; i < array.Length; i++)
@@ -20,14 +20,9 @@ namespace Lab_1
 			}
 		}
 
-		public void Print()
+		public int GetSortedArrEl(int i)
 		{
-			for (int i = 0; i < _array.Length; i++)
-			{
-				if (i == 0) Console.Write("[" + _array[i] + ", ");
-				if ((i != 0) && (i != _array.Length - 1)) Console.Write(" " + _array[i] + ", ");
-				if (i == _array.Length - 1) Console.WriteLine(" " + _array[i] + "]");
-			}
+			return _array[i];
 		}
 
 		public void Sort(int head, int tail)
@@ -54,13 +49,6 @@ namespace Lab_1
 
 			if (head < j) this.Sort(head, j);
 			if (tail > i) this.Sort(i, tail);
-		}
-
-
-
-		public int GetTail()
-		{
-			return _array.Length - 1;
 		}
 	}
 
