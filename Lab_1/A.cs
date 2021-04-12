@@ -36,8 +36,6 @@ namespace Lab_1
 		public void Sort(int head, int tail)
 		{
 			int i = head, j = tail;
-			/*int head = Head;
-			int tail = Tail;*/
 			int pivot = this.arr[tail];
 
 			do
