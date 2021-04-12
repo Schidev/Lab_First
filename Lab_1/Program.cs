@@ -6,16 +6,14 @@ namespace Lab_1
     {
         static void Main(string[] args)
         {
-			A b = new A();
-			Console.WriteLine();
-			Console.WriteLine("Enter 10 numbers: ");
-			b.FillArray();
-
+			int[] arr = new[] { 6, 4, 2, 5, 1, 2, 0 };
+			A b = new A(arr);
+			
 			Console.WriteLine();
 			Console.Write("Array b4 sorting: ");
 			b.Print();
 
-			b.Sort(0, b.GetSIZE() - 1);
+			b.Sort(0, b.GetTail());
 
 			Console.WriteLine();
 			Console.Write("Array after sorting: ");
